@@ -18,4 +18,4 @@ jobs:
           paths:
             - ~/.m2
           key: spring-boot-cognito-client-{{ checksum "pom.xml" }}
-      - run: mvn clean package
+      - run: mvn clean install
