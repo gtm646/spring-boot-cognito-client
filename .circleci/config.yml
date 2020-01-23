@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/spring-boot-cognito-client
+    branches:
+      only:
+        - master
+        - develop
+        - /feature-.*/
+    docker:
+      - image: openjdk:11-jdk
+    steps:
+      - checkout
+      - restore_cache:
+          key: spring-boot-cognito-client-{{ checksum "pom.xml" }}
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: spring-boot-cognito-client-{{ checksum "pom.xml" }}
+      - run: mvn clean package
