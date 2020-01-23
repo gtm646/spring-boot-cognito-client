@@ -11,8 +11,8 @@
 	<groupId>com.cognito</groupId>
 	<artifactId>cognito-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>knnm-cognito-client</name>
-	<description>KPN Netwerk NL - AWS Cognito API Client</description>
+	<name>cognito-client</name>
+	<description>Spring boot - AWS Cognito API client</description>
 
 	<properties>
 		<java.version>11</java.version>
